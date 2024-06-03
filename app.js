@@ -123,7 +123,9 @@ app.options('/movies/:id',(req,res)=>{
   res.send(200)
 })
 
-
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/index.html');
+});
 
 const PORT = process.env.PORT ?? 1234
 
